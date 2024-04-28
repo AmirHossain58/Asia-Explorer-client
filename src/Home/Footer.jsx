@@ -5,15 +5,15 @@ const Footer = () => {
     return (
         <footer className="footer p-10 bg-base-200 text-base-content">
   <aside className='gap-0'>
-  <Link to={'/'} className="font-bold text-xl">AsiaExplorer</Link>
+  <Link to={'/'} className="font-bold text-xl">Asia<span className="text-green-500">Explorer</span></Link>
   <p></p>
   </aside> 
   <nav>
     <h6 className="footer-title">Services</h6> 
-    <a className="link link-hover">Hotel Management</a>
-    <a className="link link-hover">Event Planning</a>
-    <a className="link link-hover">Guest Experience Enhancement</a>
-    <a className="link link-hover">Concierge Services</a>
+    <a className="link link-hover">Travel Planning Assistance</a>
+    <a className="link link-hover">Tour Packages</a>
+    <a className="link link-hover">Travel Booking</a>
+    <a className="link link-hover">Travel Guides and Blogs</a>
   </nav> 
   <nav>
     <h6 className="footer-title">Company</h6> 

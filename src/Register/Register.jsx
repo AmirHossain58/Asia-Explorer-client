@@ -68,7 +68,7 @@ const Register = () => {
             navigate(location?.state?location.state:'/')
         })
         .catch(e=>{
-            console.log(e);
+            // console.log(e);
         })
     }
     return (

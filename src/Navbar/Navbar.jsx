@@ -18,7 +18,7 @@ const Navbar = ({name,photo}) => {
   <li><NavLink to='/blogs'>Blogs</NavLink></li>
   </>
   return (
-      <div className=" bg-base-200">
+      <div className=" bg-green-100">
       <div className='navbar container mx-auto '>
       <div className="navbar-start">
         <div className="dropdown">
@@ -36,7 +36,7 @@ const Navbar = ({name,photo}) => {
             }
           </ul>
         </div>
-      <Link to={'/'} className="btn btn-ghost gap-0 font-bold text-xl">Hospitality<span className="text-red-500">Haven</span></Link>
+      <Link to={'/'} className="btn btn-ghost gap-0 font-bold text-xl">Asia<span className="text-green-500">Explorer</span></Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -60,7 +60,9 @@ const Navbar = ({name,photo}) => {
           </div>
          </div>
           <button onClick={handelLogOut} className='btn'>Logout</button>
-        </div>:<Link to={'/login'} className="btn">Login</Link>
+        </div>:<div><Link to={'/login'} className="btn bg-green-300 font-bold">Login</Link>
+        <Link to={'/register'} className="btn bg-green-300 font-bold"> Register</Link>
+        </div>
         }
       </div>
       </div>
