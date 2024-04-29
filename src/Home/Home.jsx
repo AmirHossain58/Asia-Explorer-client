@@ -8,6 +8,9 @@ import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../provider/AuthProvider";
 import Footer from "./Footer";
 import Banner from "./Banner";
+import TouristsSpots from "./TouristsSpots";
+import Services from "./Services";
+import Blog from "./Blog";
 const Home = () => {
   const {loading}=useContext(AuthContext)
   if(loading){
@@ -34,10 +37,11 @@ const Home = () => {
       <div className="container mx-auto">
         {/* <ToastContainer /> */}
         <Banner></Banner>
-        {/* <EstateSection></EstateSection> */}
-        {/* <OurLocation></OurLocation> */}
+        <TouristsSpots></TouristsSpots>
+        <Services></Services>
+        <Blog></Blog>
       </div>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   );
 };

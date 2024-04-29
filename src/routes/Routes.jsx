@@ -4,6 +4,11 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import Home from "../Home/Home";
 import Login from "./../Login/Login";
 import Register from "./../Register/Register";
+import AllTouristsSpot from "../AllTouristsSpot/AllTouristsSpot";
+import AddTouristsSpot from "../Home/AddTouristsSpot";
+import MyList from "../Home/MyList";
+import PrivateRoute from './PrivateRoute';
+import ViewDetails from "../Home/ViewDetails";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +27,30 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/AllTouristsSpot",
+        element: <AllTouristsSpot></AllTouristsSpot>,
+      },
+      {
+        path: "/AddTouristsSpot",
+        element: <PrivateRoute>
+          <AddTouristsSpot></AddTouristsSpot>
+        </PrivateRoute>,
+      },
+      {
+        path: "/MyList",
+        element:<PrivateRoute>
+          <MyList></MyList>
+        </PrivateRoute> 
+        ,
+      },
+      {
+        path: "/ViewDetails/:id",
+        element:<PrivateRoute>
+          <ViewDetails></ViewDetails>
+        </PrivateRoute> ,
+        loader:({params})=>fetch(`http://localhost:5000/TouristsSpot/${params.id}`)
       },
     ],
   },
