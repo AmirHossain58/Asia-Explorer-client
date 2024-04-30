@@ -6,7 +6,7 @@ import Login from "./../Login/Login";
 import Register from "./../Register/Register";
 import AllTouristsSpot from "../AllTouristsSpot/AllTouristsSpot";
 import AddTouristsSpot from "../Home/AddTouristsSpot";
-import MyList from "../Home/MyList";
+import MyList from "../Mylist/MyList";
 import PrivateRoute from './PrivateRoute';
 import ViewDetails from "../Home/ViewDetails";
 
