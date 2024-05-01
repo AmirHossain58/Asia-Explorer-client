@@ -4,6 +4,7 @@ import Footer from '../Home/Footer';
 import { AuthContext } from '../provider/AuthProvider';
 import SpotsCard from '../AllTouristsSpot/SpotsCard';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const MyList = () => {
     const {user,}=useContext(AuthContext)
@@ -62,8 +63,7 @@ const MyList = () => {
       setUseAddDataSort(sortData)
       console.log(userAddDataSort);
     }
-    const handleUpdate=(event,id)=>{
-      console.log(id);
+    const handleUpdate=(event)=>{
       event.preventDefault()
       const form=event.target;
       const tourists_spot_name=form.tourists_spot_name.value
@@ -86,8 +86,9 @@ const MyList = () => {
           totalVisitorsPerYear,
           photo
       }
-      fetch(`http://localhost:5000/TouristsSpot/${id}`,{
-          method:"PATCH",
+      console.log(updateSpot);
+      fetch(`http://localhost:5000/TouristsSpot/${userAddDataSort._id}`,{
+          method:"PUT",
           headers:{
            'content-type':'application/json'
           },
@@ -136,11 +137,15 @@ const MyList = () => {
         <td>{spot.travel_time}</td>
         <td>{spot.seasonality}</td>
         <td>{spot.totalVisitorsPerYear}</td>
-        <td>{/* You can open the modal using document.getElementById('ID').showModal() method */}
-<div onClick={()=>handleSort(spot._id)}>
-<button className="btn" onClick={()=>document.getElementById('my_modal_4').showModal()} >Update</button>
-</div>
-<dialog id="my_modal_4" className="modal">
+        <td>
+          <Link to={`/update/${spot._id}`}><button className="btn bg-green-300">Update</button></Link>
+          
+          
+          {/* You can open the modal using document.getElementById('ID').showModal() method */}
+{/* <div onClick={()=>handleSort(spot._id)}>
+<button className="btn" onClick={()=>document.getElementById('my_modal_4').showModal()} >Update</button> */}
+{/* </div> */}
+{/* <dialog id="my_modal_4" className="modal">
   <div className="modal-box w-11/12 max-w-5xl">
   <div className="card shrink-0 w-full shadow-2xl bg-green-50">
             <div className='text-center max-w-[900px] mx-auto'>
@@ -148,7 +153,7 @@ const MyList = () => {
             <p>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
             </div>
  <div className=''>
- <form method="" onSubmit={()=>handleUpdate(spot._id)}  className="card-body">
+ <form method="" onSubmit={()=>handleUpdate()}  className="card-body">
    
    <div className='flex gap-4'>
    <div className="form-control flex-1">
@@ -210,14 +215,15 @@ const MyList = () => {
      
     </div>
     <div className="form-control mt-6">
-      <button className="btn bg-green-300 font-bold">Add Tourists Spot</button>
+      <button className="btn bg-green-300 font-bold">Update Tourists Spot</button>
     </div>
   </form>
  </div>
 </div>
     
   </div>
-</dialog></td>
+</dialog> */}
+</td>
         <td><button onClick={()=>handleDelete(spot._id)} className="btn bg-green-300">Delete</button>
         </td>
       </tr>
