@@ -2,10 +2,19 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import Footer from "./Footer";
 import Swal from 'sweetalert2';
-
+import {
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Button,
+} from "@material-tailwind/react";
 const AddTouristsSpot = () => {
     const handleAddSpot=(event)=>{
         event.preventDefault()
+        const handleSelectCountry=(CountryName)=>{
+
+        }
         const form=event.target;
         const name =form.name.value
         const email =form.email.value
@@ -40,7 +49,6 @@ const AddTouristsSpot = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data);
             if(data.insertedId){
                 Swal.fire({
                     title: 'Success!',
@@ -77,25 +85,35 @@ const AddTouristsSpot = () => {
    <div className='flex gap-4'>
    <div className="form-control flex-1">
       <label className="label">
-        <span className="label-text">tourists_spot_name</span>
+        <span className="label-text">Tourists Spot Name</span>
       </label>
       <input type="text" name='tourists_spot_name' placeholder="tourists_spot_name" className="input input-bordered" required />
-    </div> <div className="form-control flex-1">
+    </div>
+     <div className="form-control flex-1">
       <label className="label">
-        <span className="label-text">country_Name</span>
+        <span className="label-text">Country Name</span>
       </label>
-      <input type="text" name='country_Name' placeholder="country_Name" className="input input-bordered" required />
+      
+        <select name='country_Name'className="select select-bordered w-full" required>
+        <option disabled selected>Select a Country:</option>
+        <option>Bangladesh</option>
+        <option>Thailand</option>
+        <option>Indonesia</option>
+        <option>Malaysia</option>
+        <option>Vietnam</option>
+        <option>Cambodia</option>
+      </select>
     </div>
    </div>
    <div className='flex gap-4'>
    <div className="form-control flex-1">
       <label className="label">
-        <span className="label-text">location</span>
+        <span className="label-text">Location</span>
       </label>
       <input type="text" name='location' placeholder="location" className="input input-bordered" required />
     </div> <div className="form-control flex-1">
       <label className="label">
-        <span className="label-text">short description</span>
+        <span className="label-text">Short Description</span>
       </label>
       <input type="text" name='shortDescription' placeholder="short description" className="input input-bordered" required />
     </div>
@@ -103,12 +121,12 @@ const AddTouristsSpot = () => {
    <div className='flex gap-4'>
    <div className="form-control flex-1">
       <label className="label">
-        <span className="label-text">travel_time</span>
+        <span className="label-text">Travel Time</span>
       </label>
       <input type="text" name='travel_time' placeholder="travel_time" className="input input-bordered" required />
     </div> <div className="form-control flex-1">
     <label className="label">
-        <span className="label-text">seasonality</span>
+        <span className="label-text">Seasonality</span>
       </label>
       <input type="text" name='seasonality' placeholder="seasonality" className="input input-bordered" required />
     </div>
@@ -116,19 +134,19 @@ const AddTouristsSpot = () => {
    <div className='flex gap-4'>
    <div className="form-control flex-1">
       <label className="label">
-        <span className="label-text">average_cost</span>
+        <span className="label-text">Average Cost</span>
       </label>
       <input type="text" name='average_cost' placeholder="average_cost" className="input input-bordered" required />
     </div> <div className="form-control flex-1">
     <label className="label">
-        <span className="label-text">total Visitors PerYear</span>
+        <span className="label-text">Total Visitors PerYear</span>
       </label>
       <input type="text" name='totalVisitorsPerYear' placeholder="totalVisitorsPerYear" className="input input-bordered" required />
     </div>
    </div>
     <div className="form-control">
       <label className="label">
-        <span className="label-text">Photo</span>
+        <span className="label-text">Photo URL</span>
       </label>
       <input type="text" name='photo' placeholder="Enter photo URL" className="input input-bordered" required />
      
