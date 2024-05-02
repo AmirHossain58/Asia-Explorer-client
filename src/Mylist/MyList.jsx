@@ -46,7 +46,7 @@ const MyList = () => {
                     if (data.deletedCount > 0) {
                         Swal.fire(
                             'Deleted!',
-                            'Your Coffee has been deleted.',
+                            'Your Tourists Spots has been deleted.',
                             'success'
                         )
                         const remaining = userAddDataSort.filter(data => data._id !== id);
@@ -57,57 +57,6 @@ const MyList = () => {
         }
     })
     }
-    const handleSort=(id)=>{
-      console.log(id);
-      const sortData=userAddData1.find(data=>data._id===id)
-      setUseAddDataSort(sortData)
-      console.log(userAddDataSort);
-    }
-    const handleUpdate=(event)=>{
-      event.preventDefault()
-      const form=event.target;
-      const tourists_spot_name=form.tourists_spot_name.value
-      const country_Name =form.country_Name.value
-      const location =form.location.value
-      const short_description =form.shortDescription.value
-      const average_cost =form.average_cost.value
-      const seasonality =form.seasonality.value
-      const travel_time =form.travel_time.value
-      const totalVisitorsPerYear =form.totalVisitorsPerYear.value
-      const photo =form.photo.value
-      const updateSpot={
-          tourists_spot_name,
-          country_Name,
-          location,
-          short_description,
-          average_cost,
-          seasonality,
-          travel_time,
-          totalVisitorsPerYear,
-          photo
-      }
-      console.log(updateSpot);
-      fetch(`http://localhost:5000/TouristsSpot/${userAddDataSort._id}`,{
-          method:"PUT",
-          headers:{
-           'content-type':'application/json'
-          },
-          body:JSON.stringify(updateSpot)
-      })
-      .then(res=>res.json())
-      .then(data=>{
-          console.log(data);
-          if(data.modifiedCount>0){
-              Swal.fire({
-                  title: 'Success!',
-                  text: 'Spot Updated Successfully',
-                  icon: 'success',
-                  confirmButtonText: 'Cool'
-                })
-          }
-      })
-     
-  }
     return (
         <div>
             <Navbar></Navbar>
