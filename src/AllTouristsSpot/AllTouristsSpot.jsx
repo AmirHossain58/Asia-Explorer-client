@@ -39,7 +39,7 @@ const AllTouristsSpot = () => {
         <div>
             <Navbar></Navbar>
         <div className='container mx-auto '>
-
+       
         <div className='my-5 flex justify-center'>
         <ul className="menu lg:menu-horizontal bg-base-200 rounded-box lg:mb-12">
         <li>
