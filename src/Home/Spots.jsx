@@ -23,7 +23,7 @@ const Spots = ({spot}) => {
         photo,_id}=spot
     return (
         <div>
-            <Card className="w-full max-w-[26rem] shadow-lg min-h-[580px]">
+            <Card className="w-full max-w-[26rem] shadow-lg min-h-[630px]">
       <CardHeader floated={false} color="blue-gray">
         <img
         className='min-h-[330px]'
@@ -74,10 +74,14 @@ const Spots = ({spot}) => {
             5.0
           </Typography>
         </div>
-        <Typography className='mb-3' variant='h5' color="gray">
-          
-        Seasonality: {seasonality}
-        </Typography>
+       <div className='flex justify-between'>
+       <Typography className='mb-3' variant='h5' color="gray">
+          Seasonality: <br /> {seasonality}
+          </Typography>
+       <Typography className='mb-3' variant='h5' color="gray">
+       Average Cost: <br />{average_cost}
+          </Typography>
+       </div>
         <Typography color="gray">
           {short_description}
         </Typography>

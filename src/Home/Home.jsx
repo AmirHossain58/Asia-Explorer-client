@@ -10,6 +10,7 @@ import TouristsSpots from "./TouristsSpots";
 import Services from "./Services";
 import Blog from "./Blog";
 import Countries from "./Countries";
+import Faq from "./Faq";
 const Home = () => {
   const {loading}=useContext(AuthContext)
   if(loading){
@@ -37,6 +38,7 @@ const Home = () => {
         <Countries></Countries>
         <Services></Services>
         <Blog></Blog>
+        <Faq></Faq>
       </div>
       <Footer></Footer>
     </div>
