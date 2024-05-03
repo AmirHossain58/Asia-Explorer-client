@@ -10,6 +10,8 @@ import MyList from "../Mylist/MyList";
 import PrivateRoute from './PrivateRoute';
 import ViewDetails from "../Home/ViewDetails";
 import Update from "../Mylist/Update";
+import CountriesViewDetails from "../Home/CountriesViewDetails";
+import SpecificCountrySpot from "../Home/SpecificCountrySpot";
 
 const router = createBrowserRouter([
   {
@@ -54,11 +56,21 @@ const router = createBrowserRouter([
         loader:({params})=>fetch(`http://localhost:5000/TouristsSpot/${params.id}`)
       },
       {
+        path: "/countriesViewDetails/:id",
+        element: <CountriesViewDetails></CountriesViewDetails>,
+        loader:({params})=>fetch(`http://localhost:5000/countriesData/${params.id}`)
+      },
+      {
         path: "/update/:id",
         element:<PrivateRoute>
           <Update></Update>
         </PrivateRoute> ,
-        loader:({params})=>fetch(`http://localhost:5000/TouristsSpot/${params.id}`)
+        loader:()=>fetch(`http://localhost:5000/TouristsSpot`)
+      },
+      {
+        path: "/specificCountrySpot/:id",
+        element:<SpecificCountrySpot></SpecificCountrySpot>,
+        loader:()=>fetch(`http://localhost:5000/TouristsSpot`)
       },
       
     ],

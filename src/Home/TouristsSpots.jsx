@@ -23,14 +23,6 @@ const TouristsSpots = () => {
                      ></Spots>)
             }
         </div>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 justify-center gap-5 mt-14'>
-            {
-                spots?.slice(0, 6).map(spot=><Spots
-                     key={spot._id}
-                     spot={spot}
-                     ></Spots>)
-            }
-        </div>
         </div>
     );
 };

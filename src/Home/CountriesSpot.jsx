@@ -10,23 +10,18 @@ import {
     IconButton,
   } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
-const Spots = ({spot}) => {
-    const{ tourists_spot_name,
-        country_Name,
-        location,
-        short_description,
-        average_cost,
-        seasonality,
-        travel_time,
-        totalVisitorsPerYear,
-        photo,_id}=spot
+const CountriesSpot = ({spot}) => {
+    console.log(spot);
+    const{country_Name,
+        short_description,image,_id}=spot
     return (
         <div>
-            <Card className="w-full max-w-[26rem] shadow-lg min-h-[580px]">
+           <Link to={`/specificCountrySpot/${country_Name}`}>
+           <Card className="w-full max-w-[26rem] shadow-lg min-h-[630px]">
       <CardHeader floated={false} color="blue-gray">
         <img
         className='min-h-[330px]'
-          src={photo}
+          src={image}
           alt="ui/ux review check"
         />
         <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
@@ -34,7 +29,7 @@ const Spots = ({spot}) => {
           size="sm"
           color="red"
           variant="text"
-          className="!absolute top-4 right-8 rounded-full"
+          className="!absolute top-4 right-8 text-red-600 rounded-full"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -48,8 +43,8 @@ const Spots = ({spot}) => {
       </CardHeader>
       <CardBody className='flex-grow'>
         <div className="mb-3 flex items-center justify-between">
-          <Typography variant="h5" color="blue-gray" className="font-medium">
-          {tourists_spot_name}, <span className='text-base'>{location} ,{country_Name}</span>
+          <Typography variant="h3" color="blue-gray" className="font-medium">
+          {country_Name}
           </Typography>
           <Typography
             color="blue-gray"
@@ -70,22 +65,20 @@ const Spots = ({spot}) => {
             5.0
           </Typography>
         </div>
-        <Typography className='mb-3' variant='h5' color="gray">
-          {seasonality}
-        </Typography>
         <Typography color="gray">
           {short_description}
         </Typography>
-      
+        
       </CardBody>
       <CardFooter className="pt-3">
       <Link to={`/ViewDetails/${_id}`}>
       <button className="btn w-full font-bold bg-green-400">View Details</button>
       </Link>
       </CardFooter>
-    </Card>
+             </Card>
+           </Link> 
         </div>
     );
 };
 
-export default Spots;
+export default CountriesSpot;

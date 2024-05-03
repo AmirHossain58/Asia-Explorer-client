@@ -11,6 +11,7 @@ import Banner from "./Banner";
 import TouristsSpots from "./TouristsSpots";
 import Services from "./Services";
 import Blog from "./Blog";
+import Countries from "./Countries";
 const Home = () => {
   const {loading}=useContext(AuthContext)
   if(loading){
@@ -38,6 +39,7 @@ const Home = () => {
         {/* <ToastContainer /> */}
         <Banner></Banner>
         <TouristsSpots></TouristsSpots>
+        <Countries></Countries>
         <Services></Services>
         <Blog></Blog>
       </div>
