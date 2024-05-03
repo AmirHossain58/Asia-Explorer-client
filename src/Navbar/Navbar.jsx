@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from './../provider/AuthProvider';
+import { Tooltip } from 'react-tooltip';
 
 const Navbar = ({name,photo}) => {
   const {user,logOut}=useContext(AuthContext)
@@ -37,6 +38,7 @@ const Navbar = ({name,photo}) => {
 
 
   const navLink=<>
+  
   <li><NavLink to='/'>Home</NavLink></li>
   <li><NavLink to='/AllTouristsSpot'>All Tourists Spot</NavLink></li>
   <li><NavLink to='/AddTouristsSpot'>Add Tourists Spots</NavLink></li>
@@ -104,13 +106,20 @@ const Navbar = ({name,photo}) => {
         {
           user? <div className='flex'>
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-         <div title={user.displayName||name} className="w-10  rounded-full">
+         <div className="w-10  rounded-full">
+         <a
+        data-tooltip-id="my-tooltip"
+        data-tooltip-content={user.displayName||name}
+        data-tooltip-variant="success"
+      >
             <img alt="Tailwind CSS Navbar component" src={user.photoURL||photo||"https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"}/>
+      </a>
+      <Tooltip id="my-tooltip" />
           </div>
          </div>
-          <button onClick={handelLogOut} className='btn bg-green-300'>Logout</button>
-        </div>:<div><Link to={'/login'} className="btn bg-green-300 font-bold">Login</Link>
-        <Link to={'/register'} className="btn bg-green-300 font-bold"> Register</Link>
+          <button onClick={handelLogOut} className='btn bg-green-400 text-white'>Logout</button>
+        </div>:<div><Link to={'/login'} className="btn bg-green-400 text-white font-bold">Login</Link>
+        <Link to={'/register'} className="btn bg-green-400 text-white font-bold"> Register</Link>
         </div>
         }
       </div>
