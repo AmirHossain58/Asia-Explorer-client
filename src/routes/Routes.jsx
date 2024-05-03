@@ -7,7 +7,7 @@ import Register from "./../Register/Register";
 import AllTouristsSpot from "../AllTouristsSpot/AllTouristsSpot";
 import AddTouristsSpot from "../Home/AddTouristsSpot";
 import MyList from "../Mylist/MyList";
-import PrivateRoute from './PrivateRoute';
+import PrivateRoute from "./PrivateRoute";
 import ViewDetails from "../Home/ViewDetails";
 import Update from "../Mylist/Update";
 import CountriesViewDetails from "../Home/CountriesViewDetails";
@@ -37,42 +37,55 @@ const router = createBrowserRouter([
       },
       {
         path: "/AddTouristsSpot",
-        element: <PrivateRoute>
-          <AddTouristsSpot></AddTouristsSpot>
-        </PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <AddTouristsSpot></AddTouristsSpot>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/MyList",
-        element:<PrivateRoute>
-          <MyList></MyList>
-        </PrivateRoute> 
-        ,
+        element: (<PrivateRoute>
+            <MyList></MyList>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/ViewDetails/:id",
-        element:<PrivateRoute>
-          <ViewDetails></ViewDetails>
-        </PrivateRoute> ,
-        loader:({params})=>fetch(`http://localhost:5000/TouristsSpot/${params.id}`)
+        element: (
+          <PrivateRoute>
+            <ViewDetails></ViewDetails>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://b9-a10-asia-explorer-server.vercel.app/TouristsSpot/${params.id}`
+          ),
       },
       {
         path: "/countriesViewDetails/:id",
         element: <CountriesViewDetails></CountriesViewDetails>,
-        loader:({params})=>fetch(`http://localhost:5000/countriesData/${params.id}`)
+        loader: ({ params }) =>
+          fetch(
+            `https://b9-a10-asia-explorer-server.vercel.app/countriesData/${params.id}`
+          ),
       },
       {
         path: "/update/:id",
-        element:<PrivateRoute>
-          <Update></Update>
-        </PrivateRoute> ,
-        loader:()=>fetch(`http://localhost:5000/TouristsSpot`)
+        element: (
+          <PrivateRoute>
+            <Update></Update>
+          </PrivateRoute>
+        ),
+        loader: () =>
+          fetch(`https://b9-a10-asia-explorer-server.vercel.app/TouristsSpot`),
       },
       {
         path: "/specificCountrySpot/:id",
-        element:<SpecificCountrySpot></SpecificCountrySpot>,
-        loader:()=>fetch(`http://localhost:5000/TouristsSpot`)
+        element: <SpecificCountrySpot></SpecificCountrySpot>,
+        loader: () =>
+          fetch(`https://b9-a10-asia-explorer-server.vercel.app/TouristsSpot`),
       },
-      
     ],
   },
 ]);

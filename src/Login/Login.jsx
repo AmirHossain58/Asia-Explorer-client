@@ -108,7 +108,7 @@ const Login = () => {
             {show?<FaEye />:<FaEyeSlash />}</div>
         </div>
         <div className="form-control mt-6">
-        <button className="btn text-xl bg-red-400 text-white uppercase font-bold">login</button>
+        <button className="btn text-xl bg-green-400 text-white uppercase font-bold">login</button>
         </div>
     </form>
     <div className='flex flex-col md:flex-row space-y-4 items-center justify-around my-5'> 

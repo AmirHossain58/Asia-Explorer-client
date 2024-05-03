@@ -132,7 +132,7 @@ const Register = () => {
             {show?<FaEye />:<FaEyeSlash />}</div>
         </div>
         <div className="form-control mt-6">
-        <button className="btn bg-red-400 uppercase font-bold">Register</button>
+        <button className="btn bg-green-400 text-white uppercase font-bold">Register</button>
         </div>
         </form>
         <div className='flex flex-col md:flex-row items-center space-y-4 justify-around my-5'> 
