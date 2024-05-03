@@ -17,7 +17,7 @@ const CountriesSpot = ({spot}) => {
     return (
         <div>
            <Link to={`/specificCountrySpot/${country_Name}`}>
-           <Card className="w-full max-w-[26rem] shadow-lg min-h-[630px]">
+           <Card className="w-full max-w-[26rem] shadow-lg min-h-[550px]">
       <CardHeader floated={false} color="blue-gray">
         <img
         className='min-h-[330px]'
@@ -70,11 +70,6 @@ const CountriesSpot = ({spot}) => {
         </Typography>
         
       </CardBody>
-      <CardFooter className="pt-3">
-      <Link to={`/ViewDetails/${_id}`}>
-      <button className="btn w-full font-bold bg-green-400">View Details</button>
-      </Link>
-      </CardFooter>
              </Card>
            </Link> 
         </div>

@@ -87,93 +87,9 @@ const MyList = () => {
         <td>{spot.seasonality}</td>
         <td>{spot.totalVisitorsPerYear}</td>
         <td>
-          <Link to={`/update/${spot._id}`}><button className="btn bg-green-300">Update</button></Link>
-          
-          
-          {/* You can open the modal using document.getElementById('ID').showModal() method */}
-{/* <div onClick={()=>handleSort(spot._id)}>
-<button className="btn" onClick={()=>document.getElementById('my_modal_4').showModal()} >Update</button> */}
-{/* </div> */}
-{/* <dialog id="my_modal_4" className="modal">
-  <div className="modal-box w-11/12 max-w-5xl">
-  <div className="card shrink-0 w-full shadow-2xl bg-green-50">
-            <div className='text-center max-w-[900px] mx-auto'>
-            <h1 className="text-4xl mt-12 font-bold">Add Tourists Spot</h1><br />
-            <p>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
-            </div>
- <div className=''>
- <form method="" onSubmit={()=>handleUpdate()}  className="card-body">
-   
-   <div className='flex gap-4'>
-   <div className="form-control flex-1">
-      <label className="label">
-        <span className="label-text">tourists_spot_name</span>
-      </label>
-      <input type="text" defaultValue={userAddDataSort.tourists_spot_name} name='tourists_spot_name' placeholder="tourists_spot_name" className="input input-bordered" required />
-    </div> <div className="form-control flex-1">
-      <label className="label">
-        <span className="label-text">country_Name</span>
-      </label>
-      <input type="text" defaultValue={userAddDataSort.country_Name} name='country_Name' placeholder="country_Name" className="input input-bordered" required />
-    </div>
-   </div>
-   <div className='flex gap-4'>
-   <div className="form-control flex-1">
-      <label className="label">
-        <span className="label-text">location</span>
-      </label>
-      <input type="text" defaultValue={userAddDataSort.location} name='location' placeholder="location" className="input input-bordered" required />
-    </div> <div className="form-control flex-1">
-      <label className="label">
-        <span className="label-text">short description</span>
-      </label>
-      <input type="text"defaultValue={userAddDataSort.short_description} name='shortDescription' placeholder="short description" className="input input-bordered" required />
-    </div>
-   </div>
-   <div className='flex gap-4'>
-   <div className="form-control flex-1">
-      <label className="label">
-        <span className="label-text">travel_time</span>
-      </label>
-      <input type="text"defaultValue={userAddDataSort.travel_time} name='travel_time' placeholder="travel_time" className="input input-bordered" required />
-    </div> <div className="form-control flex-1">
-    <label className="label">
-        <span className="label-text">seasonality</span>
-      </label>
-      <input type="text"defaultValue={userAddDataSort.seasonality} name='seasonality' placeholder="seasonality" className="input input-bordered" required />
-    </div>
-   </div>
-   <div className='flex gap-4'>
-   <div className="form-control flex-1">
-      <label className="label">
-        <span className="label-text">average_cost</span>
-      </label>
-      <input type="text"defaultValue={userAddDataSort.average_cost} name='average_cost' placeholder="average_cost" className="input input-bordered" required />
-    </div> <div className="form-control flex-1">
-    <label className="label">
-        <span className="label-text">total Visitors PerYear</span>
-      </label>
-      <input type="text"defaultValue={userAddDataSort.totalVisitorsPerYear} name='totalVisitorsPerYear' placeholder="totalVisitorsPerYear" className="input input-bordered" required />
-    </div>
-   </div>
-    <div className="form-control">
-      <label className="label">
-        <span className="label-text">Photo</span>
-      </label>
-      <input type="text"defaultValue={userAddDataSort.photo} name='photo' placeholder="Enter photo URL" className="input input-bordered" required />
-     
-    </div>
-    <div className="form-control mt-6">
-      <button className="btn bg-green-300 font-bold">Update Tourists Spot</button>
-    </div>
-  </form>
- </div>
-</div>
-    
-  </div>
-</dialog> */}
+          <Link to={`/update/${spot._id}`}><button className="btn bg-green-400 text-white">Update</button></Link>
 </td>
-        <td><button onClick={()=>handleDelete(spot._id)} className="btn bg-green-300">Delete</button>
+        <td><button onClick={()=>handleDelete(spot._id)} className="btn bg-green-400 text-white">Delete</button>
         </td>
       </tr>
                 )

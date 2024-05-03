@@ -20,7 +20,7 @@ const ErrorPage = () => {
             the page or come back later.
           </Typography>
           <Link to={'/'}>
-          <Button className="w-full bg-red-500 px-4 md:w-[8rem]">
+          <Button className="w-full bg-green-400 text-white px-4 md:w-[8rem]">
             back home
           </Button>
           </Link>

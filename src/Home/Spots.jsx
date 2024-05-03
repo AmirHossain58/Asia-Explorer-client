@@ -80,7 +80,7 @@ const Spots = ({spot}) => {
       </CardBody>
       <CardFooter className="pt-3">
       <Link to={`/ViewDetails/${_id}`}>
-      <button className="btn w-full font-bold bg-green-400">View Details</button>
+      <button className="btn w-full font-bold bg-green-400 text-white">View Details</button>
       </Link>
       </CardFooter>
     </Card>

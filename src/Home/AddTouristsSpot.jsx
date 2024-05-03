@@ -63,7 +63,7 @@ const AddTouristsSpot = () => {
     return (
         <div>
             <Navbar></Navbar>
-        <div className="card shrink-0 w-full shadow-2xl bg-green-50">
+        <div className="card shrink-0 w-full shadow-2xl ">
             <div className='text-center max-w-[900px] mx-auto'>
             <h1 className="text-4xl mt-12 font-bold">Add Tourists Spot</h1><br />
             <p>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
@@ -152,7 +152,7 @@ const AddTouristsSpot = () => {
      
     </div>
     <div className="form-control mt-6">
-      <button className="btn bg-green-300 font-bold">Add Tourists Spot</button>
+      <button className="btn bg-green-400 text-white font-bold">Add Tourists Spot</button>
     </div>
   </form>
 </div>

@@ -91,7 +91,7 @@ const ViewDetails = () => {
       
       </CardBody>
       <CardFooter className="pt-3">
-      <button className="btn w-full text-lg font-bold bg-green-400">Book Now</button>
+      <button className="btn w-full text-lg font-bold bg-green-400 text-white">Book Now</button>
       </CardFooter>
           </Card>
            </div>
