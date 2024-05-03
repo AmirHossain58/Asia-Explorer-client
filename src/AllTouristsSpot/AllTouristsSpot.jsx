@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Home/Footer';
 import SpotsCard from '../AllTouristsSpot/SpotsCard';
-import {
-    Menu,
-    MenuHandler,
-    MenuList,
-    MenuItem,
-    Button,
-  } from "@material-tailwind/react";
+
 const AllTouristsSpot = () => {
     const [click,setClick]=useState(true)
     const[spots,setSpot]=useState([])

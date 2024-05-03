@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from './../provider/AuthProvider';
 import { Tooltip } from 'react-tooltip';
+import { Fade } from "react-awesome-reveal";
+
 
 const Navbar = ({name,photo}) => {
   const {user,logOut}=useContext(AuthContext)
@@ -57,7 +59,8 @@ const Navbar = ({name,photo}) => {
             
           </ul>
         </div>
-      <Link to={'/'} className="btn btn-ghost gap-0 font-bold text-xl">Asia<span className="text-green-500">Explorer</span></Link>
+      <Link to={'/'} className="btn btn-ghost gap-0 font-bold 
+      text-xl"> Asia<span className="text-green-500">Explorer</span></Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

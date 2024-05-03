@@ -2,13 +2,6 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import Footer from "./Footer";
 import Swal from 'sweetalert2';
-import {
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
-  Button,
-} from "@material-tailwind/react";
 const AddTouristsSpot = () => {
     const handleAddSpot=(event)=>{
         event.preventDefault()

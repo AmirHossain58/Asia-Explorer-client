@@ -15,6 +15,7 @@ import {
   } from "@material-tailwind/react";
   
 import { Link } from 'react-router-dom';
+import { Fade } from 'react-awesome-reveal';
 
 const SpotsCard = ({spot}) => {
     const{ tourists_spot_name,
@@ -81,12 +82,18 @@ const SpotsCard = ({spot}) => {
           {short_description}
         </Typography>
         <div className='flex justify-between font-bold my-3'>
+        <Fade cascade>
             <div>Average Cost: {average_cost}</div>
             <div>Travel Time: {travel_time}</div>
+  
+        </Fade>
         </div>
         <div className='flex justify-between  font-bold my-3'>
-            <div>Seasonality: {seasonality}</div>
-            <div>total Visitors Per Year: {totalVisitorsPerYear}</div>
+        <Fade cascade>
+            <div>Seasonality: <br /> {seasonality}</div>
+            <div>total Visitors <br /> Per Year: {totalVisitorsPerYear}</div>
+
+            </Fade>
         </div>
       </CardBody>
       <CardFooter className="pt-3">

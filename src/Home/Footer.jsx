@@ -23,12 +23,6 @@ const Footer = () => {
     <a className="link link-hover">Jobs</a>
     <a className="link link-hover">Press kit</a>
   </nav> 
-  {/* <nav>
-    <h6 className="footer-title">Legal</h6> 
-    <a className="link link-hover">Terms of use</a>
-    <a className="link link-hover">Privacy policy</a>
-    <a className="link link-hover">Cookie policy</a>
-  </nav> */}
   <nav>
   <section className="py-6 rounded-2xl bg-blue-gray-50 dark:bg-gray-100 dark:text-gray-900">
 	<div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">

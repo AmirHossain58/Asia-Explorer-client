@@ -10,6 +10,7 @@ import {
     IconButton,
   } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
+import { Slide } from 'react-awesome-reveal';
 const Spots = ({spot}) => {
     const{ tourists_spot_name,
         country_Name,
@@ -48,9 +49,12 @@ const Spots = ({spot}) => {
       </CardHeader>
       <CardBody className='flex-grow'>
         <div className="mb-3 flex items-center justify-between">
+         <Slide triggerOnce>
           <Typography variant="h5" color="blue-gray" className="font-medium">
           {tourists_spot_name}, <span className='text-base'>{location} ,{country_Name}</span>
           </Typography>
+           </Slide>
+
           <Typography
             color="blue-gray"
             className="flex items-center gap-1.5 font-normal"
@@ -71,7 +75,8 @@ const Spots = ({spot}) => {
           </Typography>
         </div>
         <Typography className='mb-3' variant='h5' color="gray">
-          {seasonality}
+          
+        Seasonality: {seasonality}
         </Typography>
         <Typography color="gray">
           {short_description}

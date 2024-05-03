@@ -2,9 +2,7 @@ import { useContext } from "react";
 
 import Navbar from "../Navbar/Navbar";
 
-import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../provider/AuthProvider";
 import Footer from "./Footer";
 import Banner from "./Banner";
@@ -31,12 +29,9 @@ const Home = () => {
 
   return (
     <div>
-      {/* <Helmet>
-            <title>Hospitality Haven | Home</title>
-          </Helmet> */}
+   
       <Navbar></Navbar>
       <div className="container mx-auto">
-        {/* <ToastContainer /> */}
         <Banner></Banner>
         <TouristsSpots></TouristsSpots>
         <Countries></Countries>

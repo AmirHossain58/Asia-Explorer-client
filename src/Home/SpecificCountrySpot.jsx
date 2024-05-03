@@ -20,7 +20,6 @@ const SpecificCountrySpot = () => {
             setCountriesData(filter)
 
         },[])
-            console.log(countriesData);
 
         
     return (
