@@ -60,7 +60,7 @@ const MyList = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='container mx-auto gap-5 mt-14'>
+            <div className='container mx-auto gap-5 my-14'>
             <div className="overflow-x-auto">
   <table className="table">
     {/* head */}

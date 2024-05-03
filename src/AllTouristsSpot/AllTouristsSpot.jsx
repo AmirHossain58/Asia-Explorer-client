@@ -25,7 +25,6 @@ const AllTouristsSpot = () => {
         else if(sortBy==='descending'){
             setClick(false)
             const sortAscending=spots.slice().sort((a, b) => b.average_cost[1] - a.average_cost[1])
-            console.log(sortAscending);
             setSort(sortAscending)
         }
     }

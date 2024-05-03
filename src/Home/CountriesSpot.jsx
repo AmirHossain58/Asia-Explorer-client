@@ -11,7 +11,6 @@ import {
   } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
 const CountriesSpot = ({spot}) => {
-    console.log(spot);
     const{country_Name,
         short_description,image,_id}=spot
     return (

@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../Home/Footer';
 import Swal from 'sweetalert2';
 import Navbar from '../Navbar/Navbar';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 const Update = () => {
-    const spotData=useLoaderData()
+  const [spotData,setSpotData]=useState()
+  const id=useParams()
+    const spotDataAll=useLoaderData()
+    const filter=spotDataAll.find(data=>data._id===id.id)
+  useEffect(()=>{
+    setSpotData(filter)
+  },[])
     const {_id,tourists_spot_name,
       country_Name,
       location,
@@ -14,8 +20,7 @@ const Update = () => {
       seasonality,
       travel_time,
       totalVisitorsPerYear,
-      photo}=spotData
-    console.log(spotData);
+      photo}=spotData||{}
     const handleUpdateSpot=(event)=>{
         event.preventDefault()
         const form=event.target;
@@ -63,7 +68,7 @@ const Update = () => {
     return (
         <div>
             <Navbar></Navbar>
-        <div className="card container mx-auto my-12 shrink-0 w-full shadow-2xl bg-green-50">
+        <div className="card container mx-auto my-12 shrink-0 w-full shadow-2xl ">
             <div className='text-center max-w-[900px] mx-auto'>
             <h1 className="text-4xl mt-12 font-bold">Update Tourists Spot</h1><br />
             <p>Update Tourist Spot: Customize and refine your travel destinations with ease. Update details, adjust descriptions, and keep your list current for unforgettable adventures.</p>
@@ -81,7 +86,7 @@ const Update = () => {
         <span className="label-text">Country Name</span>
       </label>
       <select name='country_Name'className="select select-bordered w-full" required>
-        <option selected>{country_Name}</option>
+        <option >{country_Name}</option>
         <option>Bangladesh</option>
         <option>Thailand</option>
         <option>Indonesia</option>
