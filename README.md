@@ -42,19 +42,5 @@ Welcome to Asia Explorer! We are your ultimate guide to exploring the wonders of
 - sort-by
 - sweetalert2
 
-## Dev Dependencies
-
-- @types/react
-- @types/react-dom
-- @vitejs/plugin-react
-- autoprefixer
-- daisyui
-- eslint
-- eslint-plugin-react
-- eslint-plugin-react-hooks
-- eslint-plugin-react-refresh
-- postcss
-- tailwindcss
-- vite
 
 Feel free to adapt and enhance this README.md to better reflect the specific details and features of your Asia Explorer tourism management website.
