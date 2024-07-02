@@ -1,7 +1,10 @@
 # Asia Explorer - Tourism Management Website
 
+## Live Link
 [Asia Explorer](https://b9-a10-asia-explorer-client.web.app/)
 
+## Server Code
+[server repo](https://github.com/AmirHossain58/Asia-Explorer-server)
 ## About
 
 Asia Explorer is a Tourism Management website
@@ -39,4 +42,54 @@ Asia Explorer is a Tourism Management website
 - react-tooltip
 - sweetalert2
 
+
+Installation and Setup
+Follow these steps to clone and run the Hostel Meals Management System locally:
+
+Clone the clint and server Repository
+
+```
+git clone //<repository-url>
+cd //<repository-folder>
+```
+Install Server Dependencies
+```
+cd //server
+npm install
+```
+Install Client Dependencies
+```
+cd //client
+npm install
+```
+Set Up Environment Variables
+
+## Create a .env file in the client directory with:
+
+//firebase env
+- VITE_apiKey=//api key
+- VITE_authDomain=// auth dommain
+- VITE_appId=// api id
+- VITE_projectId=//projectId
+- VITE_storageBucket=//storageBucket
+- VITE_messagingSenderId=//messagingSenderId
+
+- VITE_API_URL=http://localhost:8000
+
+
+## Create a .env file in the server directory with:
+
+- DB_USER= //database user name
+- DB_PASS=//password
+Run the Server
+
+```
+cd //server
+npm start
+```
+Run the Client
+```
+cd //client
+npm start
+```
 
