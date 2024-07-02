@@ -29,9 +29,7 @@ Asia Explorer is a Tourism Management website
 - @heroicons/react
 - @material-tailwind/react
 - firebase
-- localforage
 - react
-- react-awesome-reveal
 - react-dom
 - react-helmet-async
 - react-hook-form
@@ -39,8 +37,6 @@ Asia Explorer is a Tourism Management website
 - react-router-dom
 - react-toastify
 - react-tooltip
-- sort-by
 - sweetalert2
 
 
-Feel free to adapt and enhance this README.md to better reflect the specific details and features of your Asia Explorer tourism management website.
