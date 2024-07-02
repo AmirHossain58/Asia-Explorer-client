@@ -4,15 +4,15 @@
 
 ## About
 
-Welcome to Asia Explorer! We are your ultimate guide to exploring the wonders of Asia. From vibrant cities to serene landscapes, Asia offers a wealth of cultural experiences, natural beauty, and adventure. Our platform is designed to help you plan and book your dream vacation with ease, ensuring an unforgettable journey through the diverse and enchanting destinations of Asia.
+Asia Explorer is a Tourism Management website
 
 ## Key Features
 
-- **Seamless Booking:** Effortlessly book tours, accommodations, and activities across Asia.
-- **Customized Itineraries:** Personalized travel itineraries tailored to your interests and preferences.
-- **Safety First:** Prioritize your safety with stringent safety measures and guidelines.
-- **Discover Diverse Destinations:** Explore a vast array of destinations, from bustling metropolises to remote villages.
-- **24/7 Customer Support:** Responsive customer support available round the clock to assist you at every stage of your journey.
+- Add Tourist Spot Page: A form for adding new tourist spots, accessible via a private route.
+- My List Page: Allows users to manage their added tourist spots, accessible via a private route.
+- Update Page: Enables users to update information about their added tourist spots, accessible via a private route.
+- Delete Button: Allows users to delete their added tourist spots with a confirmation prompt.
+- Dark/Light Theme Toggle: Allows users to switch between dark and light themes on the home page.
 
 ## Technologies Used
 
