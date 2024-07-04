@@ -19,7 +19,8 @@ Asia Explorer is a Tourism Management website
 
 ## Technologies Used
 
-- Firebase: Backend services and database management.
+- Mongodb: database management.
+- Noed: : Backend services.
 - React: Frontend framework for building a dynamic and interactive user interface.
 - React Router: Navigation and routing within the application.
 - Tailwind CSS: Utility-first CSS framework for styling components.
@@ -49,7 +50,8 @@ Follow these steps to clone and run the Hostel Meals Management System locally:
 Clone the clint and server Repository
 
 ```
-git clone //<repository-url>
+git clone https://github.com/AmirHossain58/Asia-Explorer-client.git
+git clone https://github.com/AmirHossain58/Asia-Explorer-server.git
 cd //<repository-folder>
 ```
 Install Server Dependencies
